@@ -1,5 +1,3 @@
-Here's a `README.md` file that provides instructions on how to run the application locally, including a brief overview of the project, installation steps, and usage instructions.
-
 ### `README.md`
 
 ```markdown
