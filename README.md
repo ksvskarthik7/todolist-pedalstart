@@ -1,70 +1,120 @@
-# Getting Started with Create React App
+Here's a `README.md` file that provides instructions on how to run the application locally, including a brief overview of the project, installation steps, and usage instructions.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### `README.md`
 
-## Available Scripts
+```markdown
+# Task Management Application
 
-In the project directory, you can run:
+This is a simple Task Management Application built with React for the front-end and Express.js for the back-end. The application allows users to create, read, update, and delete tasks.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Add new tasks with a title, description, and due date.
+- View a list of tasks.
+- Edit existing tasks.
+- Delete tasks.
+- Responsive design for usability on both desktop and mobile devices.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technology Stack
 
-### `npm test`
+- **Front-end:** React
+- **Back-end:** Express.js
+- **Styling:** CSS
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation and Setup
 
-### `npm run build`
+Follow these steps to set up and run the application locally.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Node.js and npm installed on your machine.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Clone the Repository
 
-### `npm run eject`
+```sh
+git clone https://github.com/yourusername/task-management-app.git
+cd task-management-app
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Install Dependencies
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Navigate to the project directory and install the dependencies for both the front-end and back-end.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```sh
+# Navigate to the front-end directory and install dependencies
+cd front-back
+npm install
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Navigate to the back-end directory and install dependencies
+cd ../back-end
+npm install
+```
 
-## Learn More
+### Running the Application
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### Start the Back-end Server
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Navigate to the back-end directory.
+2. Start the server.
 
-### Code Splitting
+```sh
+cd back-end
+node server.js
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The back-end server will run on `http://localhost:3000`.
 
-### Analyzing the Bundle Size
+#### Start the Front-end Application
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. Open a new terminal.
+2. Navigate to the front-end directory.
+3. Start the React application.
 
-### Making a Progressive Web App
+```sh
+cd front-back
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The front-end application will run on `http://localhost:3001`.
 
-### Advanced Configuration
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Open your browser and go to `http://localhost:3001`.
+- Add new tasks by filling in the title, description, and due date, then clicking the "Add Task" button.
+- View the list of tasks on the landing page.
+- Edit or delete tasks using the respective buttons.
 
-### Deployment
+## Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```plaintext
+task-management-app/
+├── back-end/
+│   ├── server.js
+├── front-back/
+│   ├── src/
+│   │   ├── App.js
+│   │   ├── App.css
+│   ├── public/
+│   ├── package.json
+├── README.md
+```
 
-### `npm run build` fails to minify
+## API Endpoints
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **GET /tasks:** Retrieve all tasks.
+- **POST /tasks:** Create a new task.
+- **GET /tasks/:id:** Retrieve a single task by its ID.
+- **PUT /tasks/:id:** Update an existing task by its ID.
+- **DELETE /tasks/:id:** Delete a task by its ID.
+
+## Additional Notes
+
+- Ensure that the back-end server is running before starting the front-end application to avoid CORS issues.
+- The front-end application uses the Fetch API to communicate with the back-end server.
+
+## Future Improvements
+
+- Add user authentication and authorization.
+- Implement task prioritization and categorization.
+- Enhance the UI with more advanced styling and animations.
+
