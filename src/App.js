@@ -73,7 +73,7 @@ function App() {
 
   return (
     <div>
-      <h1 className='taskmang'>Task Management Application</h1>
+      <h1 className='taskmang'>Task Managementss Application</h1>
       <div>
         {/* Input fields for task details */}
         <input 
